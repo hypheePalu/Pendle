@@ -9,7 +9,10 @@ def get_all_assets_metadata(chain: str):
     res =  requests.get(url)
     return res.json()
 
-
+def get_all_active_markets(chain: str):
+    url = f'{PendleAPI.ROOT.value}/v1/{ChainId[chain].value}/markets/active'
+    res =  requests.get(url)
+    return res.json()
 
 
 
